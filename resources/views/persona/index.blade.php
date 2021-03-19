@@ -8,6 +8,8 @@
 
 @section('content')
 <a href="personas/create" class="btn btn-success mb-4">CREAR</a>
+<a href="/export-personas" class="btn btn-primary mb-4">Descargar Excel</a>
+<a href="/imprimir" class="btn btn-info mb-4">Descargar PDF</a>
     <table id="personas" class="table table-light table-striped">
     <thead>
     <tr>
@@ -23,7 +25,7 @@
     <td> {{ $persona->id }} </td>
     <td> {{ $persona->nombre }} </td>
     <td> {{ $persona->apellido_paterno . ' ' . $persona->apellido_materno }} </td>
-    <td>
+    <td> 
     <form action="{{ route('personas.destroy', $persona->id) }}" method="POST">
     @csrf
     @method('DELETE')

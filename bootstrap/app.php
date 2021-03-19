@@ -41,6 +41,8 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+// $app->register(\Barryvdh\DomPDF\ServiceProvider::class);
+
 // $app->bind('path.public', function(){
 // 	return realpath('./../public/');
 // });
